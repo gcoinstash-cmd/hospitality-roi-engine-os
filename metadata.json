@@ -1,0 +1,6 @@
+{
+  "name": "Aura & Grid",
+  "description": "Boutique Hospitality ROI Engine - high-end web utility platform with a zen minimalist aesthetic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

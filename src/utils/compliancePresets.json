@@ -1,0 +1,130 @@
+{
+  "California Coast": {
+    "location": "California Coast",
+    "riskScore": 8.5,
+    "riskClassification": "High Complexity",
+    "permitCategories": "Coastal Zone Conservation, Seismic Structural Integrity, Wildfire Safety",
+    "checklist": [
+      {
+        "id": "ca-01",
+        "title": "California Coastal Commission Clearance",
+        "description": "Requires visual impact surveys, beach access review, and strict setback compliance from active cliffs.",
+        "difficulty": "High"
+      },
+      {
+        "id": "ca-02",
+        "title": "Seismic Zone 4 Engineering Audit",
+        "description": "Demands dynamic lateral-force calculations and deep-foundation pier anchoring due to local fault lines.",
+        "difficulty": "High"
+      },
+      {
+        "id": "ca-03",
+        "title": "WUI (Wildland-Urban Interface) Code Guidance",
+        "description": "Integration of non-combustible exterior finishes, Class A roofing, and a dedicated 100-foot defensible space perimeter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "ca-04",
+        "title": "Greywater & Septic Management Plan",
+        "description": "Advanced on-site filtration system mandate to protect localized coastal marine sanctuaries.",
+        "difficulty": "Medium"
+      }
+    ]
+  },
+  "Kyoto Basin": {
+    "location": "Kyoto Basin",
+    "riskScore": 9.2,
+    "riskClassification": "Severe Strictness",
+    "permitCategories": "Historical Heritage Protection, Aesthetic Landscape Ordinance, Wood Structures Fire Regulation",
+    "checklist": [
+      {
+        "id": "ky-01",
+        "title": "Historical Timber Structure Code Compliance",
+        "description": "Specialist approval required for incorporating modern moisture and fire-retardant barrier layers into traditional joinery.",
+        "difficulty": "Extreme"
+      },
+      {
+        "id": "ky-02",
+        "title": "Landscape Colors & Height Restriction (Keikan Horei)",
+        "description": "Strict compliance with traditional clay tiled roof angles, maximum building levels, and organic color palettes.",
+        "difficulty": "High"
+      },
+      {
+        "id": "ky-03",
+        "title": "Seismic Timber Framing Seismic Retrofitting",
+        "description": "Requirement for high-tech dampers and structural core isolation without altering timber aesthetic elements.",
+        "difficulty": "High"
+      },
+      {
+        "id": "ky-04",
+        "title": "Archaeological Soil Assessment Survey",
+        "description": "Pre-excavation archaeological evaluation which can freeze groundwork if cultural artifact traces are located.",
+        "difficulty": "Medium"
+      }
+    ]
+  },
+  "Amalfi Coast": {
+    "location": "Amalfi Coast",
+    "riskScore": 9.0,
+    "riskClassification": "High Complexity",
+    "permitCategories": "Soprintendenza Archeologia Belle Arti e Paesaggio (Cultural Heritage Authority), Hydrogeological Risk Assessment, UNESCO Zone Codes",
+    "checklist": [
+      {
+        "id": "am-01",
+        "title": "Soprintendenza Monumental Restoration Clearance",
+        "description": "Full hand-crafted limestone material audit. Modification of historic arches and portals is extremely restricted.",
+        "difficulty": "Extreme"
+      },
+      {
+        "id": "am-02",
+        "title": "Hydrogeological Safety Classification (Vincolo Idrogeologico)",
+        "description": "Geotechnical rock stability certificates required for slope support structures due to high coastal landslide risk.",
+        "difficulty": "High"
+      },
+      {
+        "id": "am-03",
+        "title": "UNESCO Preservation Zone Buffer Compliance",
+        "description": "Strict limit on auxiliary pathways, lighting levels, and vehicle transit during construction stages.",
+        "difficulty": "High"
+      },
+      {
+        "id": "am-04",
+        "title": "Artesian Water & Marine Drainage Permits",
+        "description": "Approval needed for custom drainage and marine eco-preservation runoff pipelines.",
+        "difficulty": "Medium"
+      }
+    ]
+  },
+  "Sonoran Desert": {
+    "location": "Sonoran Desert",
+    "riskScore": 5.2,
+    "riskClassification": "Moderate Complexity",
+    "permitCategories": "Desert Flora Conservation, Passive Solar Thermal, Ground Water Protection",
+    "checklist": [
+      {
+        "id": "sd-01",
+        "title": "Native Plant Protection Ordinance (NPPO)",
+        "description": "Mandatory survey of adult saguaro cacti, Joshua trees, and secure relocation of restricted desert desert flora.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "sd-02",
+        "title": "Arid Climate Heat-Sink Modeling Report",
+        "description": "Thermodynamic validation of rammed-earth layers and solar heat gain performance certificates.",
+        "difficulty": "Low"
+      },
+      {
+        "id": "sd-03",
+        "title": "County Water Right Allocation Authorization",
+        "description": "Sourcing and proof of water volume limits or dedicated on-site rainwater cistern setup clearances.",
+        "difficulty": "High"
+      },
+      {
+        "id": "sd-04",
+        "title": "Dark Sky Lighting Design Audit",
+        "description": "Outdoor luminous limits ensuring light is fully shielded downward to preserve dark sky status.",
+        "difficulty": "Low"
+      }
+    ]
+  }
+}

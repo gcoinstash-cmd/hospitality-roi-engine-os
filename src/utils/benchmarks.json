@@ -1,0 +1,66 @@
+[
+  {
+    "id": "california-glamping",
+    "region": "California Coast",
+    "propertyType": "Luxury Glamping Dome",
+    "adr": 420,
+    "occupancy": 65,
+    "units": 8,
+    "upsell": 90,
+    "opex": 19500,
+    "capex": 1400000,
+    "insights": {
+      "adr": "Analysis indicates highly inelastic pricing leverage on the California Coast, driven by stringent Coastal Commission occupancy quotas and absolute zoning density limits.",
+      "occupancy": "Historical room occupancy remains highly seasonal; peak third-quarter yields average 93% but are counterbalanced by winter precipitations, dropping occupancy to a standard 45% floor.",
+      "capex": "Upfront capital expenditures are heavily influenced by required seismic structural compliance, specialized marine-zone environmental offsets, and regional utility hookup charges."
+    }
+  },
+  {
+    "id": "kyoto-wellness",
+    "region": "Kyoto Basin",
+    "propertyType": "Boutique Wellness Pavilion",
+    "adr": 850,
+    "occupancy": 72,
+    "units": 10,
+    "upsell": 180,
+    "opex": 48000,
+    "capex": 4200000,
+    "insights": {
+      "adr": "Historic Machiya renewals command significant luxury room rate premiums, sustained by legislative caps on central municipal density and a lack of scalable competitor footprint.",
+      "occupancy": "Robust year-round international discretionary demand provides strong, stable occupancy, with significant seasonal peaks aligned with cherry blossom and autumn foliage travel periods.",
+      "capex": "Substantial development capital is required to fund seismological historical integrity reinforcement and municipal geothermic well permits for on-site bath infrastructure."
+    }
+  },
+  {
+    "id": "amalfi-estate",
+    "region": "Amalfi Coast",
+    "propertyType": "Historic Cliffside Estate",
+    "adr": 1550,
+    "occupancy": 70,
+    "units": 12,
+    "upsell": 250,
+    "opex": 115000,
+    "capex": 8500000,
+    "insights": {
+      "adr": "Extreme rate premiums are achievable during the peak summer window, though annual yields must be modeled against a structural off-season commercial hibernation between November and March.",
+      "occupancy": "The operational window is strictly compressed. Target assets sustain 100% load during the traditional Easter-to-October period before transitioning into dormancy for the winter quarter.",
+      "capex": "Structural restoration on limestone slopes carries significant CapEx premiums owing to marine-grade structural anchoring, custom vertical hoist logistics, and heritage conservation carpentry rules."
+    }
+  },
+  {
+    "id": "arizona-villa",
+    "region": "Sonoran Desert",
+    "propertyType": "Modernist Desert Villa",
+    "adr": 540,
+    "occupancy": 58,
+    "units": 6,
+    "upsell": 95,
+    "opex": 20000,
+    "capex": 1900000,
+    "insights": {
+      "adr": "Substantial rate premiums are captured through hyper-private corporate buyouts and secluded wellness residencies seeking low-density, remote environments.",
+      "occupancy": "Climatological factors dictate seasonality; mid-summer temperature peaks suppress volume, shifting prime cash flow generation into the winter, spring, and late autumn quarters.",
+      "capex": "Passive-solar thermal mass engineering lowers long-term operational climate-control expenses, though early-stage site modeling and specialized local construction techniques require premium upfront outlays."
+    }
+  }
+]
