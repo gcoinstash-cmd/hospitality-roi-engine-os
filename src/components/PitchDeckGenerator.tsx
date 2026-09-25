@@ -552,7 +552,7 @@ export default function PitchDeckGenerator() {
           : 'Export proposal PDF'}
       </button>
       {exportSuccess && (
-        <span className="text-[10px] font-mono text-luxury-earth flex items-center gap-1 animate-in fade-in duration-300 select-none">
+        <span className="text-xs font-semibold tracking-wider font-mono text-luxury-earth flex items-center gap-1 animate-in fade-in duration-300 select-none">
           ✦ Project proposal booklet opened in a new tab.
         </span>
       )}

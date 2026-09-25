@@ -441,7 +441,7 @@ export function GlobalStateProvider({
       {toast && (
         <div className="fixed bottom-6 right-6 z-[2000] max-w-sm bg-neutral-900 text-neutral-100 border border-luxury-stone px-4 py-3 rounded-lg shadow-2xl flex items-center gap-3 animate-in fade-in slide-in-from-bottom-5 font-mono text-xs">
           <span className={`w-1.5 h-1.5 rounded-full animate-ping shrink-0 ${toast.type === 'error' ? 'bg-rose-500' : toast.type === 'info' ? 'bg-blue-400' : 'bg-emerald-400'}`} />
-          <span className="flex-1 text-[11px] leading-tight">{toast.message}</span>
+          <span className="flex-1 text-xs font-semibold leading-tight">{toast.message}</span>
           <button 
             type="button"
             onClick={() => setToast(null)} 

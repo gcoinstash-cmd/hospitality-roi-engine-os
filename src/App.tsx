@@ -116,25 +116,25 @@ function AppContent() {
         
         {/* Curated Introduction Block - Aura & Grid Brand appears once, lighter, secondary */}
         <div className="text-center">
-          <span className="font-sans text-[10px] tracking-[0.25em] text-luxury-clay select-none opacity-60 font-light block mb-4">
+          <span className="font-sans text-xs font-semibold tracking-wider tracking-[0.25em] text-luxury-clay select-none opacity-60 font-light block mb-4">
             Aura & Grid
           </span>
           <h1 className="font-serif text-4xl sm:text-5xl font-light text-luxury-charcoal tracking-tight leading-tight mb-3">
             Hospitality ROI Calculator
           </h1>
-          <p className="text-xs sm:text-sm text-luxury-earth max-w-lg mx-auto leading-relaxed font-light">
+          <p className="text-base font-semibold text-luxury-earth max-w-lg mx-auto leading-relaxed font-light">
             Estimate revenue, profit, and payback for your project.
           </p>
         </div>
 
         {/* Project Completion Progress Bar */}
         <div className="space-y-2.5 select-none max-w-[480px] w-full mx-auto bg-white/40 p-4 rounded-2xl border border-luxury-stone/30">
-          <div className="flex justify-between items-center text-[10px] font-sans tracking-[0.12em] uppercase font-semibold text-neutral-500">
+          <div className="flex justify-between items-center text-xs font-semibold tracking-wider font-sans tracking-[0.12em] uppercase font-semibold text-neutral-500">
             <span className="flex items-center gap-1">
               <Check className={`w-3 h-3 ${currentStep === 3 ? "text-luxury-charcoal" : "text-luxury-earth"}`} />
               Project Completion
             </span>
-            <span className="font-mono text-[11px] text-luxury-clay font-bold">
+            <span className="font-mono text-xs font-semibold text-luxury-clay font-bold">
               {currentStep === 1 ? "33%" : currentStep === 2 ? "66%" : "100% (Completed!)"}
             </span>
           </div>
@@ -168,7 +168,7 @@ function AppContent() {
                   key={item.step}
                   type="button"
                   onClick={() => setCurrentStep(item.step as 1 | 2 | 3)}
-                  className={`py-2 px-1.5 sm:px-3 rounded-full transition-all duration-300 relative cursor-pointer flex items-center justify-center text-center select-none border text-[11px] sm:text-xs tracking-wide ${
+                  className={`py-2 px-1.5 sm:px-3 rounded-full transition-all duration-300 relative cursor-pointer flex items-center justify-center text-center select-none border text-xs font-semibold sm:text-xs tracking-wide ${
                     isActive 
                       ? 'bg-luxury-clay text-white border-luxury-clay font-medium shadow-3xs' 
                       : 'bg-white/80 border-luxury-stone/60 text-[#8c857b] hover:text-luxury-charcoal hover:bg-white hover:border-luxury-earth/25 font-light'
@@ -209,7 +209,7 @@ function AppContent() {
                 {/* Optional Quick-fill Presets */}
                 <div className="flex flex-col gap-3 pb-8 border-b border-luxury-stone/15">
                   <div className="flex items-center gap-2 select-none">
-                    <span className="text-[10px] uppercase tracking-wider font-sans text-neutral-400 font-light">
+                    <span className="text-xs font-semibold tracking-wider uppercase tracking-wider font-sans text-neutral-400 font-light">
                       Try an example
                     </span>
                     <span className="h-[1px] bg-luxury-stone/15 flex-1"></span>
@@ -269,7 +269,7 @@ function AppContent() {
 
                     {/* Slider 3: Units */}
                     <div className="space-y-3">
-                      <label id="units-input-label" className="block text-xs font-sans tracking-wide text-neutral-600 font-semibold mb-1">
+                      <label id="units-input-label" className="block text-sm font-sans tracking-wide text-neutral-600 font-semibold mb-1">
                         Number of units
                       </label>
                       <div className="flex items-center gap-4">
@@ -315,14 +315,14 @@ function AppContent() {
                           <span className="text-neutral-400 font-mono text-xs shrink-0 select-none">units</span>
                         </div>
                       </div>
-                      <div className="text-[11px] font-sans text-neutral-400 leading-relaxed font-light">
+                      <div className="text-xs font-semibold font-sans text-neutral-400 leading-relaxed font-light">
                         The total number of individual cabins, domes, or rooms you rent out.
                       </div>
                     </div>
 
                     {/* Slider 4: Startup cost */}
                     <div className="space-y-3">
-                      <label id="capex-input-label" className="block text-xs font-sans tracking-wide text-neutral-600 font-semibold mb-1">
+                      <label id="capex-input-label" className="block text-sm font-sans tracking-wide text-neutral-600 font-semibold mb-1">
                         Startup cost
                       </label>
                       <div className="flex items-center gap-4">
@@ -368,7 +368,7 @@ function AppContent() {
                           />
                         </div>
                       </div>
-                      <div className="text-[11px] font-sans text-neutral-400 leading-relaxed font-light">
+                      <div className="text-xs font-semibold font-sans text-neutral-400 leading-relaxed font-light">
                         The estimated cost to purchase, build, furnish, and launch your project.
                       </div>
                     </div>
@@ -417,7 +417,7 @@ function AppContent() {
 
                     {/* Slider 1: Nightly rate */}
                     <div className="space-y-3">
-                      <label id="adr-input-label" className="block text-xs font-sans tracking-wide text-neutral-600 font-semibold mb-1">
+                      <label id="adr-input-label" className="block text-sm font-sans tracking-wide text-neutral-600 font-semibold mb-1">
                         Nightly rate
                       </label>
                       <div className="flex items-center gap-4">
@@ -464,14 +464,14 @@ function AppContent() {
                           <span className="text-neutral-400 font-mono text-xs shrink-0 select-none">/ night</span>
                         </div>
                       </div>
-                      <div className="text-[11px] font-sans text-neutral-400 leading-relaxed font-light">
+                      <div className="text-xs font-semibold font-sans text-neutral-400 leading-relaxed font-light">
                         The average price you expect to charge guests per night.
                       </div>
                     </div>
 
                     {/* Slider 2: Occupancy */}
                     <div className="space-y-3">
-                      <label id="occupancy-input-label" className="block text-xs font-sans tracking-wide text-neutral-600 font-semibold mb-1">
+                      <label id="occupancy-input-label" className="block text-sm font-sans tracking-wide text-neutral-600 font-semibold mb-1">
                         Expected occupancy
                       </label>
                       <div className="flex items-center gap-4">
@@ -517,7 +517,7 @@ function AppContent() {
                           <span className="text-neutral-400 font-mono text-xs shrink-0 select-none">%</span>
                         </div>
                       </div>
-                      <div className="text-[11px] font-sans text-neutral-400 leading-relaxed font-light">
+                      <div className="text-xs font-semibold font-sans text-neutral-400 leading-relaxed font-light">
                         The average percentage of nights each year your units are booked.
                       </div>
                     </div>
@@ -536,7 +536,7 @@ function AppContent() {
                   <button
                     type="button"
                     onClick={handleSeeResults}
-                    className="flex-1 py-4 bg-luxury-clay hover:bg-luxury-charcoal text-white font-sans text-sm font-semibold rounded-xl transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 group transform active:scale-[0.99] shadow-sm"
+                    className="flex-1 py-4 bg-luxury-clay hover:bg-luxury-charcoal text-white font-sans text-base font-bold min-h-[44px] rounded-xl transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 group transform active:scale-[0.99] shadow-sm"
                   >
                     See results
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1.5 text-luxury-earth" />
@@ -581,12 +581,12 @@ function AppContent() {
                           Yearly revenue
                         </span>
                       </div>
-                      <span className="text-[10px] font-sans text-neutral-400 font-light select-none">Gross</span>
+                      <span className="text-xs font-semibold tracking-wider font-sans text-neutral-400 font-light select-none">Gross</span>
                     </div>
                     <div className="font-serif text-3xl font-light text-luxury-charcoal">
                       {formatCurrency(metrics.grossAnnualRevenue)}
                     </div>
-                    <p className="text-[11px] text-neutral-400 font-light leading-relaxed">
+                    <p className="text-xs font-semibold text-neutral-400 font-light leading-relaxed">
                       Based on <span className="font-sans font-medium text-luxury-charcoal">{formatWithCommas(metrics.bookedNights)}</span> booked nights.
                     </p>
                   </div>
@@ -600,12 +600,12 @@ function AppContent() {
                           Yearly profit
                         </span>
                       </div>
-                      <span className="text-[10px] font-sans text-neutral-400 font-light select-none">Net</span>
+                      <span className="text-xs font-semibold tracking-wider font-sans text-neutral-400 font-light select-none">Net</span>
                     </div>
                     <div className={`font-serif text-3xl font-light ${metrics.netAnnualCashflow >= 0 ? 'text-luxury-charcoal' : 'text-rose-600'}`}>
                       {formatCurrency(metrics.netAnnualCashflow)}
                     </div>
-                    <p className="text-[11px] text-neutral-400 font-light leading-relaxed">
+                    <p className="text-xs font-semibold text-neutral-400 font-light leading-relaxed">
                       Deducting <span className="font-sans font-medium text-neutral-600">{formatCurrency(inputs.opex * 12)}</span> annual opex.
                     </p>
                   </div>
@@ -619,12 +619,12 @@ function AppContent() {
                           Payback period
                         </span>
                       </div>
-                      <span className="text-[10px] font-sans text-neutral-400 font-light select-none">Breakeven</span>
+                      <span className="text-xs font-semibold tracking-wider font-sans text-neutral-400 font-light select-none">Breakeven</span>
                     </div>
                     <div className="font-serif text-3xl font-light text-luxury-charcoal">
                       {metrics.paybackPeriod !== null ? `${metrics.paybackPeriod} years` : 'No payback'}
                     </div>
-                    <p className="text-[11px] text-neutral-440 font-light leading-relaxed">
+                    <p className="text-xs font-semibold text-neutral-440 font-light leading-relaxed">
                       To offset startup cost of <span className="font-sans font-medium text-neutral-600">{formatCurrency(inputs.capex)}</span>.
                     </p>
                   </div>
@@ -633,7 +633,7 @@ function AppContent() {
 
                 {/* Short informative summary sentence */}
                 <div className="py-4 border-y border-luxury-stone/30 text-center">
-                  <p className="text-xs sm:text-sm text-luxury-clay font-sans font-medium tracking-wide">
+                  <p className="text-base font-semibold text-luxury-clay font-sans font-medium tracking-wide">
                     {metrics.paybackPeriod !== null 
                       ? `At these assumptions, your project could recover its startup cost in about ${metrics.paybackPeriod} years.`
                       : 'At these assumptions, your operating cost exceeds your revenue, meaning the startup cost cannot be recovered.'
@@ -648,15 +648,15 @@ function AppContent() {
                   </h4>
                   <div className="grid grid-cols-2 gap-4 text-xs font-sans">
                     <div>
-                      <span className="text-neutral-400 text-[10px] block">Startup investment</span>
+                      <span className="text-neutral-400 text-xs font-semibold tracking-wider block">Startup investment</span>
                       <p className="font-serif text-base font-light text-luxury-charcoal mt-0.5">{formatCurrency(inputs.capex)}</p>
                     </div>
                     <div>
-                      <span className="text-neutral-400 text-[10px] block">Gross annual revenue</span>
+                      <span className="text-neutral-400 text-xs font-semibold tracking-wider block">Gross annual revenue</span>
                       <p className="font-serif text-base font-light text-luxury-charcoal mt-0.5">{formatCurrency(metrics.grossAnnualRevenue)}</p>
                     </div>
                   </div>
-                  <p className="text-[11px] text-neutral-455 leading-relaxed font-normal font-sans">
+                  <p className="text-xs font-semibold text-neutral-455 leading-relaxed font-normal font-sans">
                     Test how your project handles slow seasons, view supplier pricing, inspect search visibility presets, or download a custom project outline below.
                   </p>
                 </div>
@@ -758,7 +758,7 @@ function AppContent() {
                               Saved plans
                             </h4>
                             {saveStreak > 0 && (
-                              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-neutral-100 border border-luxury-stone text-luxury-charcoal text-[10px] font-mono font-semibold shadow-3xs">
+                              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-neutral-100 border border-luxury-stone text-luxury-charcoal text-xs font-semibold tracking-wider font-mono font-semibold shadow-3xs">
                                 <Flame className="w-3.5 h-3.5 text-luxury-earth fill-luxury-stone shrink-0" />
                                 <span>Streak: {saveStreak}</span>
                               </div>
@@ -813,7 +813,7 @@ function AppContent() {
                                 ))}
                               </div>
                             ) : (
-                              <p className="text-[11px] text-neutral-455 italic font-normal">No saved plans on this device yet.</p>
+                              <p className="text-xs font-semibold text-neutral-455 italic font-normal">No saved plans on this device yet.</p>
                             )}
                           </div>
                         </div>
@@ -845,10 +845,10 @@ function AppContent() {
 
       {/* Refined Minimalist Footer */}
       <footer className="py-16 md:py-24 px-6 mt-16 max-w-xl mx-auto text-center font-sans space-y-3 select-none shrink-0 border-t border-luxury-stone/20">
-        <p className="text-[11px] sm:text-xs text-luxury-clay font-medium tracking-wide">
+        <p className="text-xs font-semibold sm:text-xs text-luxury-clay font-medium tracking-wide">
           Simple planning estimates for hospitality projects.
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-3 text-[10px] text-neutral-400 font-light">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-3 text-xs font-semibold tracking-wider text-neutral-400 font-light">
           <span>Results are estimates, not financial or legal advice.</span>
           <span className="hidden sm:inline text-neutral-300/60">&bull;</span>
           <span>Data is saved only on this device.</span>
@@ -882,7 +882,7 @@ function AppContent() {
               </div>
               
               <div className="space-y-1">
-                <span className="text-[10px] tracking-widest uppercase text-luxury-clay font-bold block">Scenario Validated</span>
+                <span className="text-xs font-semibold tracking-wider tracking-widest uppercase text-luxury-clay font-bold block">Scenario Validated</span>
                 <h3 className="font-serif text-2xl font-light text-luxury-charcoal">Viability Milestone Unlocked!</h3>
               </div>
 
@@ -890,17 +890,17 @@ function AppContent() {
                 Your parameters represent a highly optimized model. Operating <span className="font-semibold text-luxury-charcoal font-mono">{inputs.units} {inputs.units === 1 ? 'unit' : 'units'}</span> at <span className="font-semibold text-luxury-charcoal font-mono">{inputs.occupancy}%</span> occupancy creates a robust ROI potential.
               </p>
 
-              <div className="p-3.5 bg-neutral-50/50 rounded-xl border border-luxury-stone/50 space-y-2 text-left font-mono text-[11px] text-neutral-600 shadow-3xs">
+              <div className="p-3.5 bg-neutral-50/50 rounded-xl border border-luxury-stone/50 space-y-2 text-left font-mono text-xs font-semibold text-neutral-600 shadow-3xs">
                 <div className="flex justify-between items-center">
-                  <span className="text-[10px] uppercase text-[#8c857b] tracking-wider">Gross Profit Margin:</span>
+                  <span className="text-xs font-semibold tracking-wider uppercase text-[#8c857b] tracking-wider">Gross Profit Margin:</span>
                   <span className="font-bold text-luxury-charcoal">{metrics.grossProfitMargin.toFixed(1)}%</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-[10px] uppercase text-[#8c857b] tracking-wider">Annual Gross Rev:</span>
+                  <span className="text-xs font-semibold tracking-wider uppercase text-[#8c857b] tracking-wider">Annual Gross Rev:</span>
                   <span className="font-bold text-luxury-charcoal">{formatCurrency(metrics.grossAnnualRevenue)}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-[10px] uppercase text-[#8c857b] tracking-wider">Payback Term:</span>
+                  <span className="text-xs font-semibold tracking-wider uppercase text-[#8c857b] tracking-wider">Payback Term:</span>
                   <span className="font-bold text-luxury-charcoal">
                     {metrics.paybackPeriod !== null ? `${metrics.paybackPeriod} Years` : 'N/A'}
                   </span>

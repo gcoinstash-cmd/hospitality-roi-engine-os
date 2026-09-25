@@ -145,7 +145,7 @@ export default function Page({ params }: PageProps) {
       <article className="min-h-screen bg-[#faf9f6] text-[#11100f] py-12 px-6">
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Back Ingress Rail */}
-          <div className="flex items-center gap-1.5 text-[11px] font-sans text-[#8c857b]">
+          <div className="flex items-center gap-1.5 text-xs font-semibold font-sans text-[#8c857b]">
             <span>Hospitality Calculator / Regional details</span>
             <span>/</span>
             <span className="text-[#11100f] font-medium">{record.propertyType}</span>
@@ -164,15 +164,15 @@ export default function Page({ params }: PageProps) {
           {/* Metric Highlights */}
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6 py-6 border-y border-[#e6e4df]">
             <div className="space-y-1">
-              <span className="font-sans text-[11px] text-[#8c857b] font-medium">Matched location</span>
+              <span className="font-sans text-xs font-semibold text-[#8c857b] font-medium">Matched location</span>
               <p className="font-serif text-lg font-light">{record.regionName}</p>
             </div>
             <div className="space-y-1">
-              <span className="font-sans text-[11px] text-[#8c857b] font-medium">Expected average rate</span>
+              <span className="font-sans text-xs font-semibold text-[#8c857b] font-medium">Expected average rate</span>
               <p className="font-serif text-lg font-light">${record.default_adr} USD / night</p>
             </div>
             <div className="space-y-1">
-              <span className="font-sans text-[11px] text-[#8c857b] font-medium">Expected occupancy</span>
+              <span className="font-sans text-xs font-semibold text-[#8c857b] font-medium">Expected occupancy</span>
               <p className="font-serif text-lg font-light">{record.regional_occupancy}% average</p>
             </div>
           </section>
@@ -182,7 +182,7 @@ export default function Page({ params }: PageProps) {
             {record.tags.map((tag) => (
               <span
                 key={tag}
-                className="font-sans text-[10px] px-2.5 py-1 rounded bg-[#e6e4df]/50 text-[#11100f]/80 border border-[#e6e4df]"
+                className="font-sans text-xs font-semibold tracking-wider px-2.5 py-1 rounded bg-[#e6e4df]/50 text-[#11100f]/80 border border-[#e6e4df]"
               >
                 {tag}
               </span>

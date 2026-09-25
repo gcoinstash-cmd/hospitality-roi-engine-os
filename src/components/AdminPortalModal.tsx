@@ -67,9 +67,9 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
             <div>
               <div className="flex items-center gap-2">
                 <span className="font-mono text-xs uppercase tracking-wider text-amber-400 font-bold">HOSPITALITY ROI ENGINE OS</span>
-                <span className="text-[10px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-400 font-mono">v1.0.0 VIP</span>
+                <span className="text-xs font-semibold tracking-wider px-2 py-0.5 rounded bg-zinc-800 text-zinc-400 font-mono">v1.0.0 VIP</span>
               </div>
-              <p className="text-xs text-zinc-400">Institutional Pro-Forma &amp; RevPASH Capital Allocator</p>
+              <p className="text-base text-zinc-200 leading-relaxed">Institutional Pro-Forma &amp; RevPASH Capital Allocator</p>
             </div>
           </div>
           <button
@@ -88,7 +88,7 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
             </div>
             <div className="space-y-2">
               <h3 className="font-display font-medium text-xl text-white">Institutional Terminal Authentication</h3>
-              <p className="text-xs text-zinc-400 leading-relaxed">
+              <p className="text-base text-zinc-200 leading-relaxed leading-relaxed">
                 Enter your administrative key to view asset purchase agreements, CapEx pro-formas, and LP underwriting ledgers.
               </p>
             </div>
@@ -178,7 +178,7 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
                     {metrics.map((m, idx) => (
                       <div key={idx} className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800 space-y-2">
                         <div className="flex items-center justify-between">
-                          <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-wider">{m.label}</span>
+                          <span className="text-xs font-semibold tracking-wider font-mono text-zinc-400 uppercase tracking-wider">{m.label}</span>
                           <m.icon className={`w-4 h-4 ${m.color}`} />
                         </div>
                         <p className="text-xl font-bold font-mono text-white">{m.value}</p>
@@ -210,7 +210,7 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
                   </div>
                   <div className="border border-zinc-800 rounded-xl overflow-hidden">
                     <table className="w-full text-left text-xs">
-                      <thead className="bg-zinc-900 text-zinc-400 font-mono uppercase text-[10px] border-b border-zinc-800">
+                      <thead className="bg-zinc-900 text-zinc-400 font-mono uppercase text-xs font-semibold tracking-wider border-b border-zinc-800">
                         <tr>
                           <th className="p-3">ID</th>
                           <th className="p-3">Asset</th>
@@ -229,7 +229,7 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
                             <td className="p-3">{p.adr} ({p.occ})</td>
                             <td className="p-3 font-bold text-emerald-400">{p.netYield}</td>
                             <td className="p-3 text-right">
-                              <span className={`px-2 py-0.5 rounded text-[10px] uppercase ${
+                              <span className={`px-2 py-0.5 rounded text-xs font-semibold tracking-wider uppercase ${
                                 p.status === 'capital_secured' ? 'bg-emerald-950 text-emerald-400 border border-emerald-800' :
                                 p.status === 'underwritten' ? 'bg-amber-950 text-amber-400 border border-amber-800' :
                                 'bg-zinc-800 text-zinc-400'
@@ -257,11 +257,11 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
                         <div className="space-y-1">
                           <p className="font-semibold text-sm text-white">{s.name}</p>
                           <p className="text-xs text-amber-400/90 font-mono">Occ: {s.occ} &bull; ADR: {s.adr}</p>
-                          <p className="text-[11px] text-zinc-400">Payback: {s.payback}</p>
+                          <p className="text-xs font-semibold text-zinc-400">Payback: {s.payback}</p>
                         </div>
                         <div className="flex items-center gap-3">
                           <span className="text-base font-bold font-mono text-emerald-400">{s.irr}</span>
-                          <span className="px-2.5 py-1 rounded bg-zinc-800 text-zinc-300 font-mono text-[10px] uppercase">
+                          <span className="px-2.5 py-1 rounded bg-zinc-800 text-zinc-300 font-mono text-xs font-semibold tracking-wider uppercase">
                             {s.rating}
                           </span>
                         </div>
@@ -275,20 +275,20 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
                 <div className="space-y-4">
                   <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800 space-y-2">
                     <h4 className="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider">PostgreSQL Schema &amp; Financial Ledgers</h4>
-                    <p className="text-xs text-zinc-400 leading-relaxed">
+                    <p className="text-base text-zinc-200 leading-relaxed leading-relaxed">
                       Integrated tables for underwritten pro-formas, scenario variables, and private equity deal rooms.
                     </p>
                     <div className="grid grid-cols-3 gap-2 pt-2">
                       <div className="p-2.5 rounded-lg bg-zinc-950 border border-zinc-800 text-center">
-                        <p className="text-[10px] font-mono text-zinc-500">TABLE 1</p>
+                        <p className="text-xs font-semibold tracking-wider font-mono text-zinc-300">TABLE 1</p>
                         <p className="text-xs font-mono font-bold text-white">proforma_projects</p>
                       </div>
                       <div className="p-2.5 rounded-lg bg-zinc-950 border border-zinc-800 text-center">
-                        <p className="text-[10px] font-mono text-zinc-500">TABLE 2</p>
+                        <p className="text-xs font-semibold tracking-wider font-mono text-zinc-300">TABLE 2</p>
                         <p className="text-xs font-mono font-bold text-white">underwriting_scenarios</p>
                       </div>
                       <div className="p-2.5 rounded-lg bg-zinc-950 border border-zinc-800 text-center">
-                        <p className="text-[10px] font-mono text-zinc-500">TABLE 3</p>
+                        <p className="text-xs font-semibold tracking-wider font-mono text-zinc-300">TABLE 3</p>
                         <p className="text-xs font-mono font-bold text-white">lp_inquiries</p>
                       </div>
                     </div>

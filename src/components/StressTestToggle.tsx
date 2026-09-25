@@ -41,7 +41,7 @@ export default function StressTestToggle({ onToggle }: { onToggle?: (enabled: bo
 
   const renderDelta = (normal: number, stressed: number, isLowerBetter: boolean = false) => {
     const diff = stressed - normal;
-    if (Math.abs(diff) < 0.1) return <span className="text-neutral-400 text-[10px]">0%</span>;
+    if (Math.abs(diff) < 0.1) return <span className="text-neutral-400 text-xs font-semibold tracking-wider">0%</span>;
     const pct = (diff / (normal || 1)) * 100;
     const isWorse = isLowerBetter ? diff > 0 : diff < 0;
     
@@ -81,7 +81,7 @@ export default function StressTestToggle({ onToggle }: { onToggle?: (enabled: bo
               </span>
             )}
           </div>
-          <p className="text-[11px] text-neutral-550 leading-relaxed font-sans font-normal">
+          <p className="text-xs font-semibold text-neutral-550 leading-relaxed font-sans font-normal">
             See how your project would perform in a downside scenario. This model simulates a 20% drop in nightly rate and a 15% increase in running costs.
           </p>
         </div>
@@ -109,14 +109,14 @@ export default function StressTestToggle({ onToggle }: { onToggle?: (enabled: bo
       {/* Dynamic Analytical comparison table panel showing baseline vs stress deltas */}
       {enabled ? (
         <div className="mt-4.5 pt-4.5 border-t border-luxury-stone space-y-4 animate-in fadeIn duration-250">
-          <span className="font-sans text-[11px] font-semibold text-luxury-charcoal block select-none">
+          <span className="font-sans text-xs font-semibold font-semibold text-luxury-charcoal block select-none">
             Parameters under stress
           </span>
           
           <div className="overflow-x-auto border border-luxury-stone rounded-xl bg-white/70 overflow-hidden">
-            <table className="w-full text-left font-sans text-[11px] border-collapse">
+            <table className="w-full text-left font-sans text-xs font-semibold border-collapse">
               <thead>
-                <tr className="bg-neutral-100 border-b border-luxury-stone text-luxury-charcoal font-medium text-[10px] select-none">
+                <tr className="bg-neutral-100 border-b border-luxury-stone text-luxury-charcoal font-medium text-xs font-semibold tracking-wider select-none">
                   <th className="py-2.5 px-3 font-semibold">Financial metric</th>
                   <th className="py-2.5 px-2 text-right font-semibold">Expected plan</th>
                   <th className="py-2.5 px-2 text-right font-semibold">Stress scenario</th>
@@ -181,7 +181,7 @@ export default function StressTestToggle({ onToggle }: { onToggle?: (enabled: bo
           <div className="bg-[#faf9f6]/80 p-3.5 rounded-xl border border-luxury-stone/80 flex items-start gap-2.5 text-[10.5px]">
             <TrendingDown className="w-3.5 h-3.5 text-luxury-earth shrink-0 mt-0.5" />
             <div className="space-y-1 font-sans text-neutral-600 leading-normal font-light">
-              <span className="font-sans text-[10px] font-semibold text-luxury-charcoal block mb-0.5">Note on resilience</span>
+              <span className="font-sans text-xs font-semibold tracking-wider font-semibold text-luxury-charcoal block mb-0.5">Note on resilience</span>
               <p className="text-[11.5px] text-neutral-500 leading-relaxed font-light">
                 A drop in nightly rates increases the time required to break even. It is always wise to keep cash reserves for unexpected slow seasons.
               </p>
@@ -189,7 +189,7 @@ export default function StressTestToggle({ onToggle }: { onToggle?: (enabled: bo
           </div>
         </div>
       ) : (
-        <div className="mt-3.5 text-[10px] font-sans text-neutral-400 flex items-center gap-1.5 justify-end select-none">
+        <div className="mt-3.5 text-xs font-semibold tracking-wider font-sans text-neutral-400 flex items-center gap-1.5 justify-end select-none">
           <RefreshCcw className="w-2.5 h-2.5 animate-spin" style={{ animationDuration: '6s' }} />
           <span>Simulating normal seasonal parameters</span>
         </div>

@@ -170,10 +170,10 @@ export default function ProcurementSidebar() {
     >
       {/* Toast Notification */}
       {showToast && (
-        <div className="absolute top-4 left-4 right-4 z-50 p-3 bg-luxury-charcoal text-luxury-cream text-[11px] font-sans rounded-lg border border-luxury-earth flex items-start gap-2 shadow-lg animate-in fade-in slide-in-from-top-2 duration-300">
+        <div className="absolute top-4 left-4 right-4 z-50 p-3 bg-luxury-charcoal text-luxury-cream text-xs font-semibold font-sans rounded-lg border border-luxury-earth flex items-start gap-2 shadow-lg animate-in fade-in slide-in-from-top-2 duration-300">
           <CheckCircle2 className="w-4 h-4 text-neutral-400 shrink-0 mt-0.5" />
           <div className="flex-1">
-            <span className="font-semibold block text-[10px] text-luxury-earth">Supplier catalog</span>
+            <span className="font-semibold block text-xs font-semibold tracking-wider text-luxury-earth">Supplier catalog</span>
             {toastMessage}
           </div>
         </div>
@@ -196,7 +196,7 @@ export default function ProcurementSidebar() {
             <X className="w-4 h-4" />
           </button>
         </div>
-        <p className="text-[11px] text-luxury-earth leading-relaxed font-sans">
+        <p className="text-xs font-semibold text-luxury-earth leading-relaxed font-sans">
           Explore curated supplier cost and benefit details. Click Apply preset to test their numbers in your calculator.
         </p>
       </div>
@@ -206,7 +206,7 @@ export default function ProcurementSidebar() {
         {PROCUREMENT_CATEGORIES.map((category) => (
           <div key={category.id} className="space-y-2.5">
             <div className="space-y-0.5">
-              <span className="font-sans text-[11px] text-luxury-earth font-bold block">
+              <span className="font-sans text-xs font-semibold text-luxury-earth font-bold block">
                 {category.title}
               </span>
               <span className="text-[9.5px] text-neutral-400 block font-normal leading-tight">
@@ -317,7 +317,7 @@ export default function ProcurementSidebar() {
               <X className="w-4 h-4" />
             </button>
 
-            <span className="font-sans text-[10px] text-luxury-earth block font-medium">
+            <span className="font-sans text-xs font-semibold tracking-wider text-luxury-earth block font-medium">
               Supplier solutions catalog
             </span>
 
@@ -325,7 +325,7 @@ export default function ProcurementSidebar() {
               <h3 className="font-serif text-xl font-normal text-luxury-charcoal">
                 {selectedPartner.name}
               </h3>
-              <p className="font-sans text-[10px] text-neutral-400">
+              <p className="font-sans text-xs font-semibold tracking-wider text-neutral-400">
                 Partner supplier
               </p>
             </div>
@@ -356,7 +356,7 @@ export default function ProcurementSidebar() {
               </button>
               <button
                 onClick={handleConfirmOrder}
-                className="flex-1 py-1.5 font-sans text-xs font-semibold rounded border border-luxury-charcoal text-white bg-luxury-charcoal hover:bg-black transition cursor-pointer flex items-center justify-center gap-1"
+                className="flex-1 py-1.5 font-sans text-base font-semibold min-h-[44px] font-semibold rounded border border-luxury-charcoal text-white bg-luxury-charcoal hover:bg-black transition cursor-pointer flex items-center justify-center gap-1"
               >
                 Request info pack
                 <ArrowRight className="w-3.5 h-3.5" />

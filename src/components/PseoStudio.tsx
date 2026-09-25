@@ -186,7 +186,7 @@ export default function PseoStudio({ onApplyPreset, activePropertyName }: PseoSt
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-[11px] font-sans bg-neutral-100 border border-neutral-200 text-neutral-550 px-2.5 py-1 rounded-full flex items-center gap-1 select-none">
+          <span className="text-xs font-semibold font-sans bg-neutral-100 border border-neutral-200 text-neutral-550 px-2.5 py-1 rounded-full flex items-center gap-1 select-none">
             <ShieldCheck className="w-3.5 h-3.5 text-luxury-earth" /> Ready to apply
           </span>
         </div>
@@ -205,8 +205,8 @@ export default function PseoStudio({ onApplyPreset, activePropertyName }: PseoSt
             </div>
             
             {/* Dynamic URL String Display */}
-            <div className="p-4 bg-neutral-900 text-neutral-100 rounded-lg font-mono text-[11px] space-y-1.5 overflow-hidden">
-              <div className="flex justify-between text-[10px] text-neutral-400 font-medium font-sans">
+            <div className="p-4 bg-neutral-900 text-neutral-100 rounded-lg font-mono text-xs font-semibold space-y-1.5 overflow-hidden">
+              <div className="flex justify-between text-xs font-semibold tracking-wider text-neutral-400 font-medium font-sans">
                 <span>Web address preview</span>
                 <span className="text-neutral-300 font-semibold">Active</span>
               </div>
@@ -222,7 +222,7 @@ export default function PseoStudio({ onApplyPreset, activePropertyName }: PseoSt
           <div className="space-y-5 pt-2">
             {/* 1. Property Type Selector */}
             <div className="space-y-2">
-              <label className="text-xs font-sans text-luxury-charcoal font-semibold">
+              <label className="text-sm font-sans text-luxury-charcoal font-semibold">
                 Property type
               </label>
               <div className="flex flex-wrap gap-1.5">
@@ -247,7 +247,7 @@ export default function PseoStudio({ onApplyPreset, activePropertyName }: PseoSt
 
             {/* 2. Location Selector */}
             <div className="space-y-2">
-              <label className="text-xs font-sans text-luxury-charcoal font-semibold">
+              <label className="text-sm font-sans text-luxury-charcoal font-semibold">
                 Location
               </label>
               <div className="flex flex-wrap gap-1.5">
@@ -274,19 +274,19 @@ export default function PseoStudio({ onApplyPreset, activePropertyName }: PseoSt
           {/* Record Details Summary */}
           <div className="p-5 bg-luxury-cream/40 border border-luxury-stone rounded-xl space-y-3.5">
             <div className="flex justify-between items-baseline border-b border-luxury-stone/50 pb-2">
-              <span className="font-sans text-[11px] text-luxury-earth font-semibold">Preset details</span>
+              <span className="font-sans text-xs font-semibold text-luxury-earth font-semibold">Preset details</span>
               <span className="text-xs font-serif italic text-luxury-charcoal">{matchedRecord.regionName}</span>
             </div>
             
             <div className="space-y-1">
-              <span className="font-sans text-[10px] text-neutral-400 font-medium font-sans">Destination name</span>
+              <span className="font-sans text-xs font-semibold tracking-wider text-neutral-400 font-medium font-sans">Destination name</span>
               <p className="font-serif text-[15px] text-luxury-charcoal font-normal">
                 {matchedRecord.propertyName}
               </p>
             </div>
 
             <div className="space-y-1">
-              <span className="font-sans text-[10px] text-neutral-400 font-medium font-sans">Design style</span>
+              <span className="font-sans text-xs font-semibold tracking-wider text-neutral-400 font-medium font-sans">Design style</span>
               <p className="text-xs text-luxury-earth leading-relaxed font-sans font-light">
                 {matchedRecord.architecturalConcept}
               </p>
@@ -352,7 +352,7 @@ export default function PseoStudio({ onApplyPreset, activePropertyName }: PseoSt
                   {activeTab === 'jsonld' && <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-luxury-earth"></span>}
                 </button>
               </div>
-              <span className="font-sans text-[11px] text-[#8c857b] hidden sm:inline">Search preview</span>
+              <span className="font-sans text-xs font-semibold text-[#8c857b] hidden sm:inline">Search preview</span>
             </div>
 
             {/* TAB CONTAINER CONTENT */}
@@ -361,7 +361,7 @@ export default function PseoStudio({ onApplyPreset, activePropertyName }: PseoSt
               {/* TAB 1: Real-life Google SERP Mockup */}
               {activeTab === 'serp' && (
                 <div className="space-y-3 font-sans">
-                  <div className="flex items-center gap-1 text-[11px] text-[#202124]">
+                  <div className="flex items-center gap-1 text-xs font-semibold text-[#202124]">
                     <span className="font-semibold">Hospitality Calculator</span>
                     <span className="text-[#5f6368] font-mono">› roi-calculator ›</span>
                     <span className="text-[#3c4043]">{selectedPropertyType}</span>
@@ -379,7 +379,7 @@ export default function PseoStudio({ onApplyPreset, activePropertyName }: PseoSt
                   </p>
                   
                   {/* Dynamic Tags extracted below */}
-                  <div className="flex gap-4.5 pt-3.5 border-t border-dotted border-neutral-150 text-[11px] font-mono text-[#1a0dab]">
+                  <div className="flex gap-4.5 pt-3.5 border-t border-dotted border-neutral-150 text-xs font-semibold font-mono text-[#1a0dab]">
                     <span className="hover:underline cursor-pointer">Sitemap Tree index</span>
                     <span className="hover:underline cursor-pointer">Tax writeoffs & TOT</span>
                     <span className="hover:underline cursor-pointer">Amortization Table</span>
@@ -390,10 +390,10 @@ export default function PseoStudio({ onApplyPreset, activePropertyName }: PseoSt
               {/* TAB 2: Dynamic Page Metadata Tags served by generateMetadata() */}
               {activeTab === 'tags' && (
                 <div className="space-y-4">
-                  <p className="text-[11px] font-mono text-[#8c857b] leading-tight-none border-b pb-2">
+                  <p className="text-xs font-semibold font-mono text-[#8c857b] leading-tight-none border-b pb-2">
                     Injecting programmatic SEO head metadata back to the Layout Frame:
                   </p>
-                  <pre className="text-[10px] font-mono text-[#8c857b] leading-relaxed overflow-x-auto whitespace-pre-wrap">
+                  <pre className="text-xs font-semibold tracking-wider font-mono text-[#8c857b] leading-relaxed overflow-x-auto whitespace-pre-wrap">
                     <code>
 {`<title>${matchedRecord.seoTitle}</title>
 <meta name="description" content="${matchedRecord.seoDescription}" />
@@ -413,10 +413,10 @@ export default function PseoStudio({ onApplyPreset, activePropertyName }: PseoSt
               {/* TAB 3: Semantic JSON-LD schema.org script block */}
               {activeTab === 'jsonld' && (
                 <div className="space-y-4">
-                  <p className="text-[11px] font-mono text-[#8c857b] leading-none border-b pb-2">
+                  <p className="text-xs font-semibold font-mono text-[#8c857b] leading-none border-b pb-2">
                     Structured Data Markup injected to generate search result rich snippets:
                   </p>
-                  <pre className="text-[10px] font-mono text-[#d97706] leading-relaxed overflow-x-auto whitespace-pre-wrap bg-neutral-50 p-3.5 rounded border border-neutral-200">
+                  <pre className="text-xs font-semibold tracking-wider font-mono text-[#d97706] leading-relaxed overflow-x-auto whitespace-pre-wrap bg-neutral-50 p-3.5 rounded border border-neutral-200">
                     <code>
                       {JSON.stringify(schemaMarkup, null, 2)}
                     </code>
@@ -429,13 +429,13 @@ export default function PseoStudio({ onApplyPreset, activePropertyName }: PseoSt
           {/* Quick SSG performance metrics */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="bg-white p-4 border border-luxury-stone rounded-lg space-y-1 shadow-sm text-center">
-              <span className="font-sans text-[10px] text-[#8c857b]">Page speed</span>
+              <span className="font-sans text-xs font-semibold tracking-wider text-[#8c857b]">Page speed</span>
               <p className="font-serif text-xl font-normal text-luxury-charcoal">100 / 100</p>
               <span className="font-sans text-[9px] text-neutral-400">Optimized layout</span>
             </div>
             
             <div className="bg-white p-4 border border-luxury-stone rounded-lg space-y-1 shadow-sm text-center">
-              <span className="font-sans text-[10px] text-[#8c857b]">Search terms</span>
+              <span className="font-sans text-xs font-semibold tracking-wider text-[#8c857b]">Search terms</span>
               <p className="font-serif text-xl font-normal text-luxury-charcoal">
                 {matchedRecord.marketKeywords.length} terms
               </p>
@@ -445,7 +445,7 @@ export default function PseoStudio({ onApplyPreset, activePropertyName }: PseoSt
             </div>
 
             <div className="bg-white p-4 border border-luxury-stone rounded-lg space-y-1 shadow-sm text-center select-none">
-              <span className="font-sans text-[10px] text-[#8c857b]">Delivery status</span>
+              <span className="font-sans text-xs font-semibold tracking-wider text-[#8c857b]">Delivery status</span>
               <p className="font-serif text-xl font-normal text-luxury-charcoal">Active</p>
               <span className="font-sans text-[9px] text-neutral-400 font-light">Fast load times</span>
             </div>

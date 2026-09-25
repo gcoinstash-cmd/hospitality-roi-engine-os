@@ -98,7 +98,7 @@ const PremiumInputControl: React.FC<PremiumInputControlProps> = ({
   return (
     <div className="relative flex items-center shadow-inner">
       {prefix && (
-        <span className="absolute left-2.5 text-neutral-400 font-mono text-[10px] select-none pointer-events-none">
+        <span className="absolute left-2.5 text-neutral-400 font-mono text-xs font-semibold tracking-wider select-none pointer-events-none">
           {prefix}
         </span>
       )}
@@ -663,7 +663,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
             <h1 className="font-serif text-3xl text-luxury-charcoal mt-1">Aura & Grid Executive Summary</h1>
             <p className="text-xs text-luxury-clay font-serif italic mt-0.5">Asset Stress Test and Downside Yield Projections</p>
           </div>
-          <div className="text-right font-mono text-[10px] text-neutral-500">
+          <div className="text-right font-mono text-xs font-semibold tracking-wider text-neutral-500">
             <div>Date: {new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</div>
             <div>Status: <span className="text-rose-600 font-bold font-mono uppercase">{stressTestMode ? 'STRESSED REGIME' : 'NORMAL RANGE'}</span></div>
             <div>Scenario: {activeProjectId ? `SAVED-PROJ-${activeProjectId.substring(0, 8).toUpperCase()}` : 'ADHOC-STRESS-MODEL'}</div>
@@ -729,7 +729,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
               <button
                 type="button"
                 onClick={() => setShowSidebar(!showSidebar)}
-                className="px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider rounded border border-neutral-800 text-neutral-300 bg-neutral-900/60 hover:bg-neutral-800 hover:text-white transition cursor-pointer flex items-center gap-1.5 shadow-sm"
+                className="px-3 py-1.5 font-mono text-xs font-semibold tracking-wider uppercase tracking-wider rounded border border-neutral-800 text-neutral-300 bg-neutral-900/60 hover:bg-neutral-800 hover:text-white transition cursor-pointer flex items-center gap-1.5 shadow-sm"
                 title="Access saved project scenarios"
               >
                 <FolderOpen className="w-3.5 h-3.5 text-neutral-400" />
@@ -738,7 +738,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
               <button
                 type="button"
                 onClick={() => setShowProcurement(!showProcurement)}
-                className="px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider rounded border border-neutral-800 text-neutral-300 bg-neutral-900/60 hover:bg-neutral-800 hover:text-white transition cursor-pointer flex items-center gap-1.5 shadow-sm"
+                className="px-3 py-1.5 font-mono text-xs font-semibold tracking-wider uppercase tracking-wider rounded border border-neutral-800 text-neutral-300 bg-neutral-900/60 hover:bg-neutral-800 hover:text-white transition cursor-pointer flex items-center gap-1.5 shadow-sm"
                 title="Curated brand affiliate vendor solutions"
               >
                 <Bookmark className="w-3.5 h-3.5 text-neutral-400" />
@@ -768,7 +768,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                 onClick={() => {
                   document.getElementById('modeling-workspace-parameters')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="px-6 py-3.5 bg-gradient-to-r from-amber-500 to-[#cfa54a] hover:from-amber-600 hover:to-[#bfa040] text-neutral-950 font-bold font-mono text-[11px] uppercase tracking-wider rounded-lg shadow-xl cursor-pointer hover:scale-102 transition-all duration-300 flex items-center justify-center gap-2 group border border-amber-400/20 focus:outline-none shrink-0"
+                className="px-6 py-3.5 bg-gradient-to-r from-amber-500 to-[#cfa54a] hover:from-amber-600 hover:to-[#bfa040] text-neutral-950 font-bold font-mono text-xs font-semibold uppercase tracking-wider rounded-lg shadow-xl cursor-pointer hover:scale-102 transition-all duration-300 flex items-center justify-center gap-2 group border border-amber-400/20 focus:outline-none shrink-0"
               >
                 <span>Begin Modeling Scenario</span>
                 <ArrowRight className="w-4 h-4 text-neutral-950 transition-transform group-hover:translate-x-1" />
@@ -809,7 +809,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                           showToast("Workspace preset applied.", "success");
                           document.getElementById('modeling-workspace-parameters')?.scrollIntoView({ behavior: 'smooth' });
                         }}
-                        className="px-2.5 py-1 rounded bg-neutral-800/80 hover:bg-neutral-800 border border-neutral-700/60 hover:border-amber-500/50 font-medium font-mono text-[10px] text-neutral-200 transition-all duration-200 cursor-pointer"
+                        className="px-2.5 py-1 rounded bg-neutral-800/80 hover:bg-neutral-800 border border-neutral-700/60 hover:border-amber-500/50 font-medium font-mono text-xs font-semibold tracking-wider text-neutral-200 transition-all duration-200 cursor-pointer"
                         title={`Click to initialize ${stakeholder} preset profile`}
                       >
                         ✦ {stakeholder}
@@ -844,14 +844,14 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
             }
           ].map((step, idx) => (
             <div key={idx} className="flex gap-4 items-start pl-0 md:pl-6 first:pl-0">
-              <span className="font-mono text-[10px] font-bold text-luxury-earth bg-luxury-cream border border-luxury-stone/80 w-6 h-6 rounded-full flex items-center justify-center shrink-0">
+              <span className="font-mono text-xs font-semibold tracking-wider font-bold text-luxury-earth bg-luxury-cream border border-luxury-stone/80 w-6 h-6 rounded-full flex items-center justify-center shrink-0">
                 {step.num}
               </span>
               <div className="space-y-1">
                 <h4 className="font-serif text-xs font-bold text-luxury-charcoal uppercase tracking-wider">
                   {step.title}
                 </h4>
-                <p className="text-[11px] text-luxury-clay leading-relaxed font-light">
+                <p className="text-xs font-semibold text-luxury-clay leading-relaxed font-light">
                   {step.desc}
                 </p>
               </div>
@@ -923,7 +923,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                   setInputs(tag.preset);
                   showToast("Workspace preset applied.", "success");
                 }}
-                className={`px-4 py-2 rounded-full border text-[10px] font-mono uppercase tracking-wider transition-all duration-300 cursor-pointer ${
+                className={`px-4 py-2 rounded-full border text-xs font-semibold tracking-wider font-mono uppercase tracking-wider transition-all duration-300 cursor-pointer ${
                   isActive 
                     ? 'bg-[#1c1a17] text-white border-[#1c1a17] shadow-md scale-102 ring-1 ring-amber-500/50 font-bold' 
                     : 'bg-white hover:bg-[#faf9f6]/95 text-luxury-clay border-luxury-stone hover:border-luxury-earth/80'
@@ -975,7 +975,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                   Projects Locker ({savedProjects.length})
                 </h3>
               </div>
-              <p className="text-[11px] text-luxury-clay leading-normal">
+              <p className="text-xs font-semibold text-luxury-clay leading-normal">
                 Commit active modeling scenarios to localized browser memory to compare multiple development scales.
               </p>
 
@@ -1005,7 +1005,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                 <button
                   type="submit"
                   disabled={!newProjectName.trim() || isSaving}
-                  className={`w-full py-2.5 px-3 font-mono text-[10px] uppercase tracking-wider rounded border text-center transition-all duration-205 flex items-center justify-center gap-1.5 cursor-pointer ${
+                  className={`w-full py-2.5 px-3 font-mono text-xs font-semibold tracking-wider uppercase tracking-wider rounded border text-center transition-all duration-205 flex items-center justify-center gap-1.5 cursor-pointer ${
                     isSaving
                       ? 'border-neutral-300 text-neutral-400 bg-neutral-50 cursor-wait'
                       : saveSuccess
@@ -1042,7 +1042,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                     <p className="text-xs font-serif font-medium text-luxury-charcoal">
                       No Saved Configurations
                     </p>
-                    <p className="text-[10px] font-sans text-neutral-400 leading-normal max-w-[180px] mx-auto">
+                    <p className="text-xs font-semibold tracking-wider font-sans text-neutral-400 leading-normal max-w-[180px] mx-auto">
                       Lock your active architectural parameters above to create comparative baselines.
                     </p>
                   </div>
@@ -1146,7 +1146,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-[10px] font-mono text-luxury-charcoal uppercase tracking-wider block">
+                <label className="text-sm font-semibold tracking-wider font-mono text-luxury-charcoal uppercase tracking-wider block">
                   Select Comparative Profile:
                 </label>
                 <select
@@ -1205,7 +1205,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                       </span>
                     </div>
 
-                    <p className="text-[10px] text-neutral-500 leading-normal font-sans">
+                    <p className="text-xs font-semibold tracking-wider text-neutral-500 leading-normal font-sans">
                       {badge.description}
                     </p>
 
@@ -1311,7 +1311,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
             <div className="space-y-2">
               <div className="flex justify-between items-center gap-4">
                 <div className="space-y-1">
-                  <label className="text-xs uppercase tracking-wider font-mono text-luxury-charcoal font-medium flex items-center gap-1 flex-wrap">
+                  <label className="text-sm font-semibold uppercase tracking-wider font-mono text-luxury-charcoal font-medium flex items-center gap-1 flex-wrap">
                     <span>Average Daily Rate (ADR)</span>
                     <button
                       type="button"
@@ -1353,7 +1353,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                 className="premium-slider"
                 id="adr-slider"
               />
-              <div className="flex justify-between text-[10px] font-mono text-neutral-400">
+              <div className="flex justify-between text-xs font-semibold tracking-wider font-mono text-neutral-400">
                 <span>$150 premium base</span>
                 <span>$2,500 flagship rate</span>
               </div>
@@ -1376,7 +1376,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
             <div className="space-y-2">
               <div className="flex justify-between items-center gap-4">
                 <div className="space-y-1">
-                  <label className="text-xs uppercase tracking-wider font-mono text-luxury-charcoal font-medium flex items-center gap-1 flex-wrap">
+                  <label className="text-sm font-semibold uppercase tracking-wider font-mono text-luxury-charcoal font-medium flex items-center gap-1 flex-wrap">
                     <span>Yearly Occupancy Rate</span>
                     <button
                       type="button"
@@ -1418,7 +1418,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                 className="premium-slider"
                 id="occupancy-slider"
               />
-              <div className="flex justify-between text-[10px] font-mono text-neutral-400">
+              <div className="flex justify-between text-xs font-semibold tracking-wider font-mono text-neutral-400">
                 <span>20% conservative</span>
                 <span>100% capacity cap</span>
               </div>
@@ -1441,7 +1441,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
             <div className="space-y-2">
               <div className="flex justify-between items-center gap-4">
                 <div className="space-y-1">
-                  <label className="text-xs uppercase tracking-wider font-mono text-luxury-charcoal font-medium flex items-center gap-1 flex-wrap">
+                  <label className="text-sm font-semibold uppercase tracking-wider font-mono text-luxury-charcoal font-medium flex items-center gap-1 flex-wrap">
                     <span>Active Rental Spaces (Units)</span>
                     <button
                       type="button"
@@ -1483,7 +1483,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                 className="premium-slider"
                 id="units-slider"
               />
-              <div className="flex justify-between text-[10px] font-mono text-neutral-400">
+              <div className="flex justify-between text-xs font-semibold tracking-wider font-mono text-neutral-400">
                 <span>1 key cabin</span>
                 <span>25 keys estate limit</span>
               </div>
@@ -1493,7 +1493,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
             <div className="space-y-2">
               <div className="flex justify-between items-center gap-4">
                 <div className="space-y-1">
-                  <label className="text-xs uppercase tracking-wider font-mono text-luxury-charcoal font-medium flex items-center gap-1 flex-wrap">
+                  <label className="text-sm font-semibold uppercase tracking-wider font-mono text-luxury-charcoal font-medium flex items-center gap-1 flex-wrap">
                     <span>Ancillary spend (Upsell)</span>
                     <button
                       type="button"
@@ -1535,7 +1535,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                 className="premium-slider"
                 id="upsell-slider"
               />
-              <div className="flex justify-between text-[10px] font-mono text-neutral-400">
+              <div className="flex justify-between text-xs font-semibold tracking-wider font-mono text-neutral-400">
                 <span>$0 standard lodging</span>
                 <span>$1,000 extreme wellness add-on</span>
               </div>
@@ -1545,7 +1545,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
             <div className="space-y-2">
               <div className="flex justify-between items-center gap-4">
                 <div className="space-y-1">
-                  <label className="text-xs uppercase tracking-wider font-mono text-luxury-charcoal font-medium flex items-center gap-1 flex-wrap">
+                  <label className="text-sm font-semibold uppercase tracking-wider font-mono text-luxury-charcoal font-medium flex items-center gap-1 flex-wrap">
                     <span>Monthly Operating Expenses (OpEx)</span>
                     <button
                       type="button"
@@ -1588,7 +1588,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                 className="premium-slider"
                 id="opex-slider"
               />
-              <div className="flex justify-between text-[10px] font-mono text-neutral-400">
+              <div className="flex justify-between text-xs font-semibold tracking-wider font-mono text-neutral-400">
                 <span>$1,000 / month</span>
                 <span>$50,000 / month team overhead</span>
               </div>
@@ -1598,7 +1598,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
             <div className="space-y-2">
               <div className="flex justify-between items-center gap-4">
                 <div className="space-y-1">
-                  <label className="text-xs uppercase tracking-wider font-mono text-luxury-charcoal font-medium flex items-center gap-1 flex-wrap">
+                  <label className="text-sm font-semibold uppercase tracking-wider font-mono text-luxury-charcoal font-medium flex items-center gap-1 flex-wrap">
                     <span>Initial Setup Capital (CapEx)</span>
                     <button
                       type="button"
@@ -1640,7 +1640,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                 className="premium-slider"
                 id="capex-slider"
               />
-              <div className="flex justify-between text-[10px] font-mono text-neutral-400">
+              <div className="flex justify-between text-xs font-semibold tracking-wider font-mono text-neutral-400">
                 <span>$2,500 micro retrofit</span>
                 <span>$2,500,000 grand villa launch</span>
               </div>
@@ -1665,7 +1665,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
         <div className={`${yieldColSpan} p-6 md:p-8 space-y-8 bg-[#faf9f6]/30 flex flex-col justify-between transition-all duration-300 print:w-full print:bg-white print:p-8`}>
           
           <div className="space-y-6">
-            <h3 className="font-mono text-[11px] uppercase tracking-wider text-luxury-earth font-semibold pb-4 border-b border-luxury-stone/60 flex items-center justify-between">
+            <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-luxury-earth font-semibold pb-4 border-b border-luxury-stone/60 flex items-center justify-between">
               <span>01. Real-time Yield analysis metrics</span>
               <span className="text-neutral-450 font-normal">RE-CALCULATING LIVE</span>
             </h3>
@@ -1710,7 +1710,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                     <div className="flex items-center justify-between gap-1 border-b border-dashed border-neutral-200 pb-1.5">
                       <div className="text-left">
                         <span className="block text-[8px] font-mono uppercase text-neutral-400 font-extrabold tracking-wider">Before</span>
-                        <span className="text-[11px] font-serif font-light text-neutral-500 line-through">
+                        <span className="text-xs font-semibold font-serif font-light text-neutral-500 line-through">
                           {formatCurrency(beforeMetrics.grossAnnualRevenue)}
                         </span>
                       </div>
@@ -1790,7 +1790,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                     <div className="flex items-center justify-between gap-1 border-b border-dashed border-neutral-200 pb-1.5">
                       <div className="text-left">
                         <span className="block text-[8px] font-mono uppercase text-neutral-400 font-extrabold tracking-wider">Before</span>
-                        <span className="text-[11px] font-serif font-light text-neutral-500 line-through">
+                        <span className="text-xs font-semibold font-serif font-light text-neutral-500 line-through">
                           {formatCurrency(beforeMetrics.netAnnualCashflow)}
                         </span>
                       </div>
@@ -1874,7 +1874,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                     <div className="flex items-center justify-between gap-1 border-b border-dashed border-neutral-200 pb-1.5">
                       <div className="text-left">
                         <span className="block text-[8px] font-mono uppercase text-neutral-400 font-extrabold tracking-wider">Before</span>
-                        <span className="text-[11px] font-serif font-light text-neutral-500">
+                        <span className="text-xs font-semibold font-serif font-light text-neutral-500">
                           {beforeMetrics.paybackPeriod !== null ? `${beforeMetrics.paybackPeriod} Yrs` : 'Deficit'}
                         </span>
                       </div>
@@ -1971,14 +1971,14 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                     <ShieldAlert className="w-4 h-4 text-rose-605 animate-pulse shrink-0" />
                     Quantitative Risk Protocol Active
                   </span>
-                  <p className="text-[11px] text-rose-750 font-serif italic max-w-xl leading-normal">
+                  <p className="text-xs font-semibold text-rose-750 font-serif italic max-w-xl leading-normal">
                     Simulated downside scenario pressure contracts annual net cash flow by <strong className="text-rose-800 font-bold">{Math.round(((baselineMetrics.netAnnualCashflow - metrics.netAnnualCashflow) / (baselineMetrics.netAnnualCashflow || 1)) * 100)}%</strong>. Setup payback period is severely skewed.
                   </p>
                 </div>
                 <button
                   onClick={() => window.print()}
                   id="print-risk-report-btn"
-                  className="px-4 py-2 font-mono text-[10px] uppercase font-bold tracking-wider rounded border border-rose-300 text-rose-700 bg-white hover:bg-rose-100 hover:text-rose-800 transition cursor-pointer flex items-center gap-2 shadow-sm shrink-0"
+                  className="px-4 py-2 font-mono text-xs font-semibold tracking-wider uppercase font-bold tracking-wider rounded border border-rose-300 text-rose-700 bg-white hover:bg-rose-100 hover:text-rose-800 transition cursor-pointer flex items-center gap-2 shadow-sm shrink-0"
                 >
                   <Printer className="w-3.5 h-3.5" />
                   Export Risk Report
@@ -2036,13 +2036,13 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                           <div className="grid grid-cols-2 gap-2.5 w-full sm:w-auto shrink-0">
                             <div className="bg-[#faf9f6]/80 border border-luxury-stone/50 hover:border-luxury-earth/50 rounded-lg px-2.5 py-1.5 min-w-[105px] transition duration-200">
                               <span className="block text-[8px] font-mono uppercase text-neutral-400 font-extrabold tracking-wider mb-0.5">Gross Revenue</span>
-                              <span className="text-[11px] font-mono font-bold text-luxury-charcoal">
+                              <span className="text-xs font-semibold font-mono font-bold text-luxury-charcoal">
                                 {formatCurrency(projection.grossRevenue)}
                               </span>
                             </div>
                             <div className="bg-[#faf9f6]/80 border border-luxury-stone/50 hover:border-luxury-earth/50 rounded-lg px-2.5 py-1.5 min-w-[105px] transition duration-200">
                               <span className="block text-[8px] font-mono uppercase text-neutral-400 font-extrabold tracking-wider mb-0.5">Operating Cost</span>
-                              <span className="text-[11px] font-mono font-medium text-luxury-clay">
+                              <span className="text-xs font-semibold font-mono font-medium text-luxury-clay">
                                 {formatCurrency(projection.opex)}
                               </span>
                             </div>
@@ -2093,7 +2093,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                 <h4 className="font-serif text-lg font-normal text-luxury-charcoal">
                   Tax & Exit Estimates
                 </h4>
-                <div className="font-mono text-[10px] text-luxury-earth uppercase tracking-wider">
+                <div className="font-mono text-xs font-semibold tracking-wider text-luxury-earth uppercase tracking-wider">
                   Feasibility Scenario Estimates
                 </div>
               </div>
@@ -2114,8 +2114,8 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                 {/* Mode Selector and description */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-luxury-stone/40 pb-4">
                   <div className="space-y-0.5">
-                    <span className="font-mono text-[10px] uppercase font-bold tracking-wider text-luxury-earth">Depreciation Strategy</span>
-                    <p className="text-[11px] text-neutral-500 max-w-sm leading-normal">
+                    <span className="font-mono text-xs font-semibold tracking-wider uppercase font-bold tracking-wider text-luxury-earth">Depreciation Strategy</span>
+                    <p className="text-xs font-semibold text-neutral-500 max-w-sm leading-normal">
                       Toggle bonus depreciation to simulate the Year 01 tax shield write-off.
                     </p>
                   </div>
@@ -2172,7 +2172,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                         <div className="font-serif text-xl font-light text-luxury-charcoal leading-none">
                           {formatCurrency(taxExitMetrics.annualTaxShieldYear1)}
                         </div>
-                        <p className="text-[10px] font-mono text-neutral-400">
+                        <p className="text-xs font-semibold tracking-wider font-mono text-neutral-400">
                           Based on {formatCurrency(taxExitMetrics.annualDepreciationYear1)} Year 1 deduction
                         </p>
                       </>
@@ -2204,7 +2204,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                         <div className="font-serif text-xl font-light text-luxury-charcoal leading-none">
                           {formatCurrency(taxExitMetrics.projectedExitProceeds)}
                         </div>
-                        <p className="text-[10px] font-mono text-neutral-400">
+                        <p className="text-xs font-semibold tracking-wider font-mono text-neutral-400">
                           Assuming 15% holding appreciation
                         </p>
                       </>
@@ -2218,14 +2218,14 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                     <span className="font-mono text-[9.5px] uppercase font-bold tracking-wider text-luxury-earth block">
                       Estimated Depreciation & Resale Ledger
                     </span>
-                    <p className="text-[10px] text-neutral-450 font-sans leading-relaxed">
+                    <p className="text-xs font-semibold tracking-wider text-neutral-450 font-sans leading-relaxed">
                       Below is the mathematical breakdown of cost basis depreciation versus estimated property resale. 
                       <strong className="text-neutral-550 ml-1">Calculation Assumption:</strong> Terminal Proceeds are calculated under standard underwriting assumptions: Terminal Sale Revaluation (estimated at {formatCurrency(taxExitMetrics.salePrice)} via 15% cumulative 5-year appreciation) minus Brokerage & Transaction Sale Commissions (6% of Sale Price, or {formatCurrency(taxExitMetrics.sellingCosts)}) minus the Remaining Unrecovered Asset Book Basis ({formatCurrency(taxExitMetrics.remainingBasis)}).
                     </p>
                   </div>
                   
                   <div className="overflow-hidden border border-neutral-250 rounded-xl bg-white shadow-xs">
-                    <table className="w-full text-left text-[11px] font-mono border-collapse">
+                    <table className="w-full text-left text-xs font-semibold font-mono border-collapse">
                       <thead>
                         <tr className="bg-neutral-50/70 border-b border-neutral-200 text-luxury-earth uppercase text-[8.5px] tracking-wider select-none">
                           <th className="py-2.5 px-4 font-bold text-[8.5px]">Financial Metric Component</th>
@@ -2269,7 +2269,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                         </tr>
                         <tr className="border-t-2 border-neutral-300 bg-emerald-50/20 font-semibold text-luxury-charcoal">
                           <td className="py-3 px-4 font-serif text-[12px] text-emerald-950">Scenario Net Exit Proceeds</td>
-                          <td className="py-3 px-3 text-right text-neutral-500 font-normal text-[10px] font-sans">Sale Price - Fees - Basis</td>
+                          <td className="py-3 px-3 text-right text-neutral-500 font-normal text-xs font-semibold tracking-wider font-sans">Sale Price - Fees - Basis</td>
                           <td className="py-3 px-4 text-right text-emerald-800 font-bold text-[12px] font-sans">
                             {formatCurrency(taxExitMetrics.projectedExitProceeds)}
                           </td>
@@ -2288,7 +2288,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                 <h4 className="font-serif text-lg font-normal text-luxury-charcoal">
                   Regulatory & Zoning Feasibility
                 </h4>
-                <div className="font-mono text-[10px] text-luxury-earth uppercase tracking-wider">
+                <div className="font-mono text-xs font-semibold tracking-wider text-luxury-earth uppercase tracking-wider">
                   Planning and zoning checkpoints
                 </div>
               </div>
@@ -2312,7 +2312,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                   <div className="flex justify-between items-baseline">
                     <span className="font-mono text-[9px] uppercase font-bold tracking-wider text-luxury-earth">Zoning Complexity Indicator</span>
                     <div className="flex items-center gap-2">
-                      <span className={`text-[10px] font-mono px-2 py-0.5 rounded border leading-none font-semibold ${
+                      <span className={`text-xs font-semibold tracking-wider font-mono px-2 py-0.5 rounded border leading-none font-semibold ${
                         currentCompliancePreset.riskScore >= 8 
                           ? 'bg-rose-50 text-rose-800 border-rose-100'
                           : currentCompliancePreset.riskScore >= 5
@@ -2374,7 +2374,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                           </div>
                           <div className="space-y-0.5 flex-1">
                             <div className="flex justify-between items-baseline gap-2">
-                              <span className={`text-[11px] font-semibold text-luxury-charcoal ${isChecked ? 'line-through text-neutral-450' : ''}`}>
+                              <span className={`text-xs font-semibold font-semibold text-luxury-charcoal ${isChecked ? 'line-through text-neutral-450' : ''}`}>
                                 {hurdle.title}
                               </span>
                               <span className={`text-[8.5px] font-mono px-1.5 py-0.2 rounded font-semibold ${
@@ -2416,7 +2416,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
           </div>
 
           {/* Micro Information Alert */}
-          <div className="mt-6 flex gap-2 items-start text-[10px] text-luxury-earth font-mono leading-relaxed bg-[#faf9f6] p-4 border border-luxury-stone rounded-lg">
+          <div className="mt-6 flex gap-2 items-start text-xs font-semibold tracking-wider text-luxury-earth font-mono leading-relaxed bg-[#faf9f6] p-4 border border-luxury-stone rounded-lg">
             <Info className="w-3.5 h-3.5 text-luxury-earth shrink-0" />
             <span>
               The 5-Year model compounds Year 1 metrics forward at 3% annually whilst keeping raw operating expenditure flat. Negative net values reflect structural deficit settings.
@@ -2428,7 +2428,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
         {showProcurement && (
           <div className="lg:col-span-3 print:hidden">
             <React.Suspense fallback={
-              <div className="p-6 border border-luxury-stone bg-[#faf9f6]/40 rounded-xl space-y-3 font-mono text-[10px] text-luxury-earth uppercase tracking-widest animate-pulse h-[400px] flex flex-col justify-center items-center">
+              <div className="p-6 border border-luxury-stone bg-[#faf9f6]/40 rounded-xl space-y-3 font-mono text-xs font-semibold tracking-wider text-luxury-earth uppercase tracking-widest animate-pulse h-[400px] flex flex-col justify-center items-center">
                 <span>Loading Procurement System...</span>
               </div>
             }>
@@ -2458,7 +2458,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
           {/* Factor 1 */}
           <div className="space-y-3 p-4 bg-white/55 border border-luxury-stone/80 rounded-xl shadow-xs hover:border-luxury-earth/50 transition duration-300">
             <div className="flex items-center gap-2">
-              <span className="flex items-center justify-center w-6 h-6 rounded-full bg-luxury-earth/10 text-luxury-earth font-mono text-[11px] font-bold">
+              <span className="flex items-center justify-center w-6 h-6 rounded-full bg-luxury-earth/10 text-luxury-earth font-mono text-xs font-semibold font-bold">
                 01
               </span>
               <h4 className="font-serif text-sm font-medium text-luxury-charcoal">
@@ -2476,7 +2476,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
           {/* Factor 2 */}
           <div className="space-y-3 p-4 bg-white/55 border border-luxury-stone/80 rounded-xl shadow-xs hover:border-luxury-earth/50 transition duration-300">
             <div className="flex items-center gap-2">
-              <span className="flex items-center justify-center w-6 h-6 rounded-full bg-luxury-earth/10 text-luxury-earth font-mono text-[11px] font-bold">
+              <span className="flex items-center justify-center w-6 h-6 rounded-full bg-luxury-earth/10 text-luxury-earth font-mono text-xs font-semibold font-bold">
                 02
               </span>
               <h4 className="font-serif text-sm font-medium text-luxury-charcoal">
@@ -2494,7 +2494,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
           {/* Factor 3 */}
           <div className="space-y-3 p-4 bg-white/55 border border-luxury-stone/80 rounded-xl shadow-xs hover:border-luxury-earth/50 transition duration-300">
             <div className="flex items-center gap-2">
-              <span className="flex items-center justify-center w-6 h-6 rounded-full bg-luxury-earth/10 text-luxury-earth font-mono text-[11px] font-bold">
+              <span className="flex items-center justify-center w-6 h-6 rounded-full bg-luxury-earth/10 text-luxury-earth font-mono text-xs font-semibold font-bold">
                 03
               </span>
               <h4 className="font-serif text-sm font-medium text-luxury-charcoal">
@@ -2512,7 +2512,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
           {/* Factor 4 */}
           <div className="space-y-3 p-4 bg-[#fbfbf9]/60 border border-luxury-stone/80 rounded-xl shadow-xs hover:border-luxury-earth/50 transition duration-300">
             <div className="flex items-center gap-2">
-              <span className="flex items-center justify-center w-6 h-6 rounded-full bg-luxury-earth/10 text-luxury-earth font-mono text-[11px] font-bold">
+              <span className="flex items-center justify-center w-6 h-6 rounded-full bg-luxury-earth/10 text-luxury-earth font-mono text-xs font-semibold font-bold">
                 04
               </span>
               <h4 className="font-serif text-sm font-medium text-luxury-charcoal">
@@ -2566,10 +2566,10 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
               <div className="space-y-1.5">
                 <div className="flex items-center gap-2 text-amber-500 font-mono">
                   <Save className="w-4 h-4" />
-                  <span className="text-[10px] uppercase tracking-wider font-semibold">01 / SAVE MODEL</span>
+                  <span className="text-xs font-semibold tracking-wider uppercase tracking-wider font-semibold">01 / SAVE MODEL</span>
                 </div>
                 <h4 className="font-serif text-sm font-medium text-white">Save Model</h4>
-                <p className="text-[11px] leading-relaxed text-neutral-400">
+                <p className="text-xs font-semibold leading-relaxed text-neutral-400">
                   Save your active custom parameters (ADR, Occupancy, and CapEx) directly to your local browser storage to reload them in future sessions.
                 </p>
               </div>
@@ -2590,7 +2590,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                 <button
                   type="submit"
                   disabled={!newProjectName.trim() || isSaving}
-                  className={`w-full py-2.5 px-3 font-mono text-[10px] uppercase tracking-wider rounded border text-center transition flex items-center justify-center gap-1.5 cursor-pointer ${
+                  className={`w-full py-2.5 px-3 font-mono text-xs font-semibold tracking-wider uppercase tracking-wider rounded border text-center transition flex items-center justify-center gap-1.5 cursor-pointer ${
                     isSaving
                       ? 'border-neutral-800 text-neutral-500 bg-neutral-950 cursor-wait'
                       : saveSuccess
@@ -2617,10 +2617,10 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
               <div className="space-y-1.5">
                 <div className="flex items-center gap-2 text-amber-500 font-mono">
                   <FileText className="w-4 h-4" />
-                  <span className="text-[10px] uppercase tracking-wider font-semibold">02 / EXPORT DECK</span>
+                  <span className="text-xs font-semibold tracking-wider uppercase tracking-wider font-semibold">02 / EXPORT DECK</span>
                 </div>
                 <h4 className="font-serif text-sm font-medium text-white">Export Pitch Deck</h4>
-                <p className="text-[11px] leading-relaxed text-neutral-400">
+                <p className="text-xs font-semibold leading-relaxed text-neutral-400">
                   Generate a styled two-page feasibility presentation summarizing structural margins, location offsets, and tax-depreciation models for potential stakeholders.
                 </p>
               </div>
@@ -2635,10 +2635,10 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
               <div className="space-y-1.5">
                 <div className="flex items-center gap-2 text-amber-500 font-mono">
                   <Code className="w-4 h-4" />
-                  <span className="text-[10px] uppercase tracking-wider font-semibold">03 / EMBED WIDGET</span>
+                  <span className="text-xs font-semibold tracking-wider uppercase tracking-wider font-semibold">03 / EMBED WIDGET</span>
                 </div>
                 <h4 className="font-serif text-sm font-medium text-white">Embed Widget</h4>
-                <p className="text-[11px] leading-relaxed text-neutral-400">
+                <p className="text-xs font-semibold leading-relaxed text-neutral-400">
                   Generate a responsive iframe snippet to embed this calculator into external client portals, design proposals, or project website dashboards.
                 </p>
               </div>
@@ -2648,7 +2648,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                   type="button"
                   onClick={handleGenerateWidget}
                   disabled={isGeneratingWidget}
-                  className={`w-full py-2.5 px-3 font-mono text-[10px] uppercase tracking-wider rounded border transition duration-200 flex items-center justify-center gap-1.5 cursor-pointer ${
+                  className={`w-full py-2.5 px-3 font-mono text-xs font-semibold tracking-wider uppercase tracking-wider rounded border transition duration-200 flex items-center justify-center gap-1.5 cursor-pointer ${
                     isGeneratingWidget
                       ? 'border-neutral-850 text-neutral-500 bg-[#121212] cursor-wait'
                       : widgetSuccess || showEmbed
@@ -2684,7 +2684,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                 <button
                   type="button"
                   onClick={handleCopyEmbed}
-                  className="font-mono text-[10px] text-amber-500 hover:text-white transition flex items-center gap-1 bg-neutral-900 border border-neutral-850 px-2.5 py-1 rounded cursor-pointer"
+                  className="font-mono text-base font-semibold min-h-[44px] font-semibold tracking-wider text-amber-500 hover:text-white transition flex items-center gap-1 bg-neutral-900 border border-neutral-850 px-2.5 py-1 rounded cursor-pointer"
                 >
                   {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
                   {copied ? 'EMBED COPIED' : 'COPY RAW CODE'}
@@ -2694,9 +2694,9 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                 readOnly
                 value={embedCode}
                 rows={2}
-                className="w-full text-[11px] font-mono p-3 bg-neutral-900 border border-neutral-850 rounded text-neutral-350 focus:outline-none focus:ring-0 ring-0"
+                className="w-full text-base min-h-[44px] font-semibold font-mono p-3 bg-neutral-900 border border-neutral-850 rounded text-neutral-350 focus:outline-none focus:ring-0 ring-0"
               />
-              <p className="text-[10px] font-sans text-neutral-500 leading-normal">
+              <p className="text-xs font-semibold tracking-wider font-sans text-neutral-500 leading-normal">
                 Supports responsive container scaling, inherits cross-origin sandbox parameters, and operates in zero-HMR workspace mode.
               </p>
             </div>
@@ -2720,7 +2720,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
             <button 
               type="button"
               onClick={() => setIsArchitectModalOpen(false)}
-              className="absolute top-4 right-4 text-neutral-400 hover:text-luxury-charcoal transition cursor-pointer font-mono text-[11px]"
+              className="absolute top-4 right-4 text-neutral-400 hover:text-luxury-charcoal transition cursor-pointer font-mono text-xs font-semibold"
             >
               ✕ CLOSE
             </button>
@@ -2733,7 +2733,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                 <h3 className="font-serif text-xl font-light leading-tight">
                   Connect with Permit Specialist Architect
                 </h3>
-                <p className="text-[11px] text-neutral-500 leading-normal">
+                <p className="text-xs font-semibold text-neutral-500 leading-normal">
                   Our regional consultants coordinate structural validation, native flora zoning, and local permit approval protocols for the <strong className="font-medium text-luxury-charcoal">{resolvedLocationName}</strong> sector.
                 </p>
               </div>
@@ -2797,7 +2797,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                       className="w-full text-xs py-2 px-3 border border-luxury-stone bg-white rounded focus:outline-none focus:ring-1 focus:ring-luxury-earth text-luxury-charcoal placeholder-neutral-400"
                     />
                     {errors.name && (
-                      <p className="text-[10px] text-rose-500 font-mono mt-0.5">{errors.name}</p>
+                      <p className="text-xs font-semibold tracking-wider text-rose-500 font-mono mt-0.5">{errors.name}</p>
                     )}
                   </div>
 
@@ -2814,7 +2814,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                       className="w-full text-xs py-2 px-3 border border-luxury-stone bg-white rounded focus:outline-none focus:ring-1 focus:ring-luxury-earth text-luxury-charcoal placeholder-neutral-400"
                     />
                     {errors.email && (
-                      <p className="text-[10px] text-rose-500 font-mono mt-0.5">{errors.email}</p>
+                      <p className="text-xs font-semibold tracking-wider text-rose-500 font-mono mt-0.5">{errors.email}</p>
                     )}
                   </div>
 
@@ -2862,7 +2862,7 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
               <button 
                 type="button"
                 onClick={() => setActiveMethodologyKey(null)}
-                className="absolute top-4 right-4 text-neutral-400 hover:text-luxury-charcoal transition cursor-pointer font-mono text-[11px]"
+                className="absolute top-4 right-4 text-neutral-400 hover:text-luxury-charcoal transition cursor-pointer font-mono text-xs font-semibold"
               >
                 ✕ CLOSE
               </button>
@@ -2894,14 +2894,14 @@ export default function HospitalityCalculator({ presetInputs }: HospitalityCalcu
                 </div>
 
                 <div className="p-3 bg-white/60 border border-luxury-stone rounded-lg space-y-2">
-                  <div className="flex items-center gap-1.5 font-mono text-[10px]">
+                  <div className="flex items-center gap-1.5 font-mono text-xs font-semibold tracking-wider">
                     <span className={`w-2 h-2 rounded-full ${details.isMarketBacked ? 'bg-emerald-600' : 'bg-amber-500 animate-pulse'}`}></span>
                     <span className={`font-semibold uppercase tracking-wider ${details.isMarketBacked ? 'text-emerald-800' : 'text-amber-800'}`}>
                       {details.sourceLabel}
                     </span>
                   </div>
                   {details.baselineValueStr && (
-                    <p className="font-mono text-[10px] text-neutral-400 leading-none">
+                    <p className="font-mono text-xs font-semibold tracking-wider text-neutral-400 leading-none">
                       {details.baselineValueStr}
                     </p>
                   )}
